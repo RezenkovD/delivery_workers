@@ -1,3 +1,5 @@
 black
 isort
 Faker
+pytest
+pytest-cov
