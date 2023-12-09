@@ -65,7 +65,7 @@ jobs:
 
       - name: Test with Pytest
         run: |
-          pytest --cov-report=xml --cov=src tests/
+          pytest --cov-report=xml --cov=app tests/
         env:
           CI: true
           PYTHONPATH: ${{ secrets.PYTHONPATH }}
