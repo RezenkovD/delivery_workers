@@ -3,3 +3,4 @@ isort
 Faker
 pytest
 pytest-cov
+flake8
