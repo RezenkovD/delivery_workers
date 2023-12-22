@@ -19,5 +19,5 @@ class ScheduleCreate(BaseModel):
     status: Optional[ScheduleStatus]
 
 
-class ScheduleModel(VehicleCreate):
+class ScheduleModel(ScheduleCreate):
     id: int
