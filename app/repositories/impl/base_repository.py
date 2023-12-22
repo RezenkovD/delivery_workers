@@ -22,6 +22,7 @@ class BaseRepository:
         self._session.add(item)
         self._session.flush()
         self._session.refresh(item)
+        return item
 
     def update(self, item):
         existing_item = (

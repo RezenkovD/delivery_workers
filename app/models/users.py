@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy_utils import URLType
 
 from database import Base
-from enums import UserStatus
+from enums import UserRole
 
 
 class User(Base):
@@ -13,4 +13,4 @@ class User(Base):
     first_name = Column(String, unique=False, nullable=False)
     last_name = Column(String, unique=False, nullable=False)
     password = Column(String, unique=False, nullable=False)
-    role = Column(String, Enum(UserStatus), nullable=False)
+    role = Column(String, Enum(UserRole), nullable=False)

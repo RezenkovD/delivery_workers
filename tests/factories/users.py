@@ -1,7 +1,7 @@
 import factory
 
 from models import User
-from enums import UserStatus
+from enums import UserRole
 
 from .base_factory import BaseFactory
 
@@ -11,7 +11,7 @@ class UserFactory(BaseFactory):
     first_name = factory.Faker("first_name")
     last_name = factory.Faker("last_name")
     password = factory.Faker("password")
-    role = UserStatus.DRIVER
+    role = UserRole.DRIVER
 
     class Meta:
         model = User

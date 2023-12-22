@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from database import UnitOfWork
 from models import User
 from repositories.impl import BaseRepository
-from enums import UserStatus
+from enums import UserRole
 
 
 class TestBaseRepository(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestBaseRepository(unittest.TestCase):
                 first_name="John",
                 last_name="Doe",
                 password="secret",
-                role=UserStatus.DRIVER,
+                role=UserRole.DRIVER,
             )
             uow.users.create(user)
 
@@ -50,7 +50,7 @@ class TestBaseRepository(unittest.TestCase):
                 first_name="John",
                 last_name="Doe",
                 password="secret",
-                role=UserStatus.DRIVER,
+                role=UserRole.DRIVER,
             )
             uow.users.create(user)
 
@@ -66,7 +66,7 @@ class TestBaseRepository(unittest.TestCase):
                 first_name="John",
                 last_name="Doe",
                 password="secret",
-                role=UserStatus.DRIVER,
+                role=UserRole.DRIVER,
             )
 
             user_repository.create(user)
@@ -81,7 +81,7 @@ class TestBaseRepository(unittest.TestCase):
                 first_name="John",
                 last_name="Doe",
                 password="secret",
-                role=UserStatus.DRIVER,
+                role=UserRole.DRIVER,
             )
             uow.users.create(user)
 
@@ -100,7 +100,7 @@ class TestBaseRepository(unittest.TestCase):
                 first_name="John",
                 last_name="Doe",
                 password="secret",
-                role=UserStatus.DRIVER,
+                role=UserRole.DRIVER,
             )
             uow.users.create(user)
 
