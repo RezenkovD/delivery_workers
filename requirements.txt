@@ -3,3 +3,4 @@ psycopg2
 SQLAlchemy
 SQLAlchemy-Utils
 pydantic_settings
+pydantic
