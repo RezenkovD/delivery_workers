@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Callable
 from sqlalchemy.orm import Session
 
-from repositories.impl import UserRepository
+from repositories.impl import UserRepository, ScheduleRepository
 
 
 class UnitOfWorkBase(ABC):
@@ -28,6 +28,7 @@ class UnitOfWork(UnitOfWorkBase):
     def __enter__(self):
         self._session: Session = self._session_factory()
         self.users = UserRepository(self._session)
+        self.schedules = ScheduleRepository(self._session)
         return super().__enter__()
 
     def commit(self):
