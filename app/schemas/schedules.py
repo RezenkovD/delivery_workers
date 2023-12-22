@@ -15,9 +15,9 @@ class ScheduleCreate(BaseModel):
     arrival_location: str
     departure_time: datetime.datetime
     arrival_time: datetime.datetime
-    logist_id: int
-    status: Optional[ScheduleStatus]
 
 
 class ScheduleModel(ScheduleCreate):
     id: int
+    logist_id: int
+    status: Optional[ScheduleStatus]
