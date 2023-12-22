@@ -1,7 +1,7 @@
 from enum import StrEnum
 
 
-class UserStatus(StrEnum):
+class UserRole(StrEnum):
     DRIVER = "DRIVER"
     EMPLOYEE = "EMPLOYEE"
     LOGIST = "LOGIST"

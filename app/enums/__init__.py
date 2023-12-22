@@ -1,1 +1,1 @@
-from .users_status import UserStatus
+from .users_role import UserRole
